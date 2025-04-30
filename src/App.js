@@ -1,10 +1,12 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {Home} from "./pages/home";
-import {Auth} from "./pages/auth";
+
 import {CreateRecipe} from "./pages/create-recipe";
 import {SavedRecipes} from "./pages/saved-recipes";
 import {Navbar} from "./components/navbar";
+import { Login } from './components/Login';
+import { Register } from './components/Register';
 function App() {
   return (
     <div className="App">
@@ -12,7 +14,8 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/auth' element={<Auth />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
           <Route path='/create-recipe' element={<CreateRecipe />} />
           <Route path='/saved-recipes' element={<SavedRecipes />} />
 
