@@ -34,7 +34,7 @@ export const Home = () => {
 
         const fetchSavedRecipe = async () => {
             try{
-                const response = await axios.get(`http://localhost:3001/recipes/savedRecipes/ids/${userID}`);
+                const response = await Api.get(`/recipes/savedRecipes/ids/${userID}`);
                 setSavedRecipes(response.data.savedRecipes);
             } catch(err) {
                 console.error(err);
